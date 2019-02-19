@@ -6,9 +6,7 @@ import Spinner from "./Spinner";
 
 class PostsTable extends Component {
 	async componentDidMount() {
-		const posts = await axios.get(
-			"https://jsonplaceholder.typicode.com/posts"
-		);
+		const posts = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
 		this.props.setPosts(posts.data);
 	}
